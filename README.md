@@ -26,3 +26,38 @@ The tool checks a given URL against 8 weighted criteria (e.g. suspicious domain 
 git clone https://github.com/Gallasoumya/phishing-detection-tool.git
 cd phishing-detection-tool
 python main.py
+   # 2/11/26   now its upgraded project ready to use
+# PhishGuard – Phishing URL Checker
+
+A simple web app that checks if a link looks like a phishing link. Paste a URL, get a risk score and the reasons behind it.
+
+Built with Python (Flask), HTML, CSS and JavaScript.
+
+**Live demo:** _add your Render link here_
+
+## What it checks
+
+- Uses an IP address instead of a domain name
+- Very long URLs
+- `@` symbol used to hide the real site
+- Too many subdomains
+- HTTP instead of HTTPS
+- Risky domain endings like `.xyz` or `.tk`
+- Words like "login" or "verify" mixed with brand names like "paypal"
+- Look-alike domains (punycode)
+
+Each check adds points. A higher score means a higher risk.
+
+## How to run
+
+```
+
+## Project files
+
+- `app.py` – Flask server
+- `analyzer.py` – the phishing checks
+- `static/index.html` – the web page
+
+## Note
+
+This tool uses simple rules, so it is not perfect. Always be careful with unknown links.
